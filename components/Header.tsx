@@ -35,7 +35,7 @@ function Header() {
                 alt='netflix logo' 
                 width={120} 
                 height={80} 
-                className='cursor-pointer object-contain' 
+                className='cursor-pointer object-contain h-auto' 
             />
 
             <ul className="hidden space-x-4 md:flex">

@@ -31,7 +31,8 @@ function Banner({netflixOriginals}: Props) {
                 src={`${baseUrl}${movie?.backdrop_path || movie?.poster_path}`}
                 alt={`${movie?.title}`}
                 fill
-                objectFit="cover"
+                className="object-cover"
+                priority
             />
         </div>
 
