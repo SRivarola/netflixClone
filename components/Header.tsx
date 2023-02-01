@@ -3,12 +3,10 @@ import Link from "next/link"
 import { useEffect, useState } from "react"
 import { AiOutlineSearch } from "react-icons/ai"
 import { HiBell } from "react-icons/hi"
-import useAuth from "../hook/useAuth"
 
 function Header() {
 
     const [isScrolled, setIsScrolled] = useState(false)
-    const { logOut } = useAuth()
 
     useEffect(() => {
       const handleScroll = () => {
@@ -51,16 +49,15 @@ function Header() {
             <AiOutlineSearch className="hidden sm:inline h-6 w-6"/>
             <p className="hidden lg:inline">Kids</p>
             <HiBell className="h-6 w-6"/>
-            {/* <Link href='/account'> */}
+            <Link href='/account'>
                 <Image 
-                  onClick={logOut}
                   width={30}
                   height={30}
                   className="cursor-pointer rounded" 
                   src="https://firebasestorage.googleapis.com/v0/b/netflix-clone-b9cab.appspot.com/o/avatar.png?alt=media&token=80f5b3e5-9204-42d8-a409-901c4ab24560" 
                   alt="avatar" 
                 />
-            {/* </Link> */}
+            </Link>
         </div>
     </header>
   )

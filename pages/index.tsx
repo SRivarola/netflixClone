@@ -1,6 +1,6 @@
 import { getProducts, Product } from '@stripe/firestore-stripe-payments'
 import Head from 'next/head'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Banner from '../components/Banner'
 import Header from '../components/Header'
 import Modal from '../components/Modal'
@@ -31,13 +31,17 @@ const Home = ({netflixOriginals, trendingNow, topRated, actionMovies, comedyMovi
   const { loading, user } = useAuth()
   const { showModal } = useModal()
   const subscription = useSubscription(user)
+  const [isLoading, setLoading] = useState(true)
 
-  if(loading){
-    return null
-  }
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    }, 1000);
+  }, [])
+  
 
+  if(loading || isLoading) return null
   if(!subscription) return <Plans products={products} />
-
   return (
     <div className={`relative h-screen bg-gradient-to-b lg:h-[140vh] ${showModal && '!h-screen overflow-hidden'}`}>
       <Head>

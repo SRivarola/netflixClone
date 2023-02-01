@@ -14,6 +14,7 @@
 
     - Para ver los detalles de cada pelicula seleccionada instale MaterialUI, para utilizar el MODAL que provee, de esta manera agregué la funcionalidad del boton del banner, y del tumbnail, para que cuando apretemos ahi se abra el modal y le pase la info de dicha pelicula a este componente, y así poder mostrar los datos, agregando también un boton para cerrar el modal y una botonera donde se puede mutear el video, sumarlo a mis favoritos y tambien simula darle play/me gusta. Para ver el video instale react-player, popular librería para poder visualizar los videos en react.
 
+    - Configuración del metodo de pago con stripe y firebase, una implementación muy dinámica donde cargamos los planes de pago y luego para poder actualizar el plan al que adherimos. Con el hook useSubscription, utilizamos una logica dentro de nuestro index para que se visualice la pagina de pago si aun no tienes subscripción, y luego el componente account para los datos de la cuenta y actualizaciones o cancelaciones.
 
 # Deploy del proyecto
 
