@@ -8,6 +8,7 @@ import Plans from '../components/Plans'
 import Row from '../components/Row'
 import payments from '../config/stripe'
 import useAuth from '../hook/useAuth'
+import useList from '../hook/useList'
 import useModal from '../hook/useModal'
 import useSubscription from '../hook/useSubscription'
 import { Movie } from '../typing'
@@ -27,11 +28,11 @@ interface Props {
 
 const Home = ({netflixOriginals, trendingNow, topRated, actionMovies, comedyMovies, horrorMovies, romanceMovies, documentaries, products}: Props) => {
   
-  const [list, setList] = useState([])
   const { loading, user } = useAuth()
   const { showModal } = useModal()
   const subscription = useSubscription(user)
   const [isLoading, setLoading] = useState(true)
+  const list = useList(user?.uid)
 
   useEffect(() => {
     setTimeout(() => {
@@ -58,7 +59,7 @@ const Home = ({netflixOriginals, trendingNow, topRated, actionMovies, comedyMovi
           <Row title='Action Thrillers' movies={actionMovies} />
 
           {/* My List */}
-          {/* {list.length && <Row title='My List' movies={list} />} */}
+          {list.length && <Row title='My List' movies={list} />}
 
           <Row title='Comedies' movies={comedyMovies} />
           <Row title='Scary Movies' movies={horrorMovies} />

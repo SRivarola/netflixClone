@@ -2,10 +2,11 @@ import { useRef, useState, useEffect } from 'react'
 import { Movie } from "../typing"
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi"
 import Thumbnail from "./Thumbnail"
+import { DocumentData } from 'firebase/firestore'
 
 interface Props {
     title: string
-    movies: Movie[]
+    movies: Movie[] | DocumentData[]
 }
 
 function Row({title, movies}: Props) {

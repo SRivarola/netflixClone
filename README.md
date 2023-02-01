@@ -16,6 +16,11 @@
 
     - Configuración del metodo de pago con stripe y firebase, una implementación muy dinámica donde cargamos los planes de pago y luego para poder actualizar el plan al que adherimos. Con el hook useSubscription, utilizamos una logica dentro de nuestro index para que se visualice la pagina de pago si aun no tienes subscripción, y luego el componente account para los datos de la cuenta y actualizaciones o cancelaciones.
 
+    -Menu desplegable para la version mobile con MIU.
+
+    -Logica para agregar o sacar peliculas de mi lista de favoritos. 
+
+
 # Deploy del proyecto
 
     - https://netflix-clone-bysantiagorivarola.vercel.app/
