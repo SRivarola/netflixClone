@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from 'react'
+import { useRef, useState } from 'react'
 import { Movie } from "../typing"
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi"
 import Thumbnail from "./Thumbnail"

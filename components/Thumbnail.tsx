@@ -1,9 +1,10 @@
+import { DocumentData } from "firebase/firestore"
 import Image from "next/image"
 import useModal from "../hook/useModal"
 import { Movie } from "../typing"
 
 interface Props {
-    movie: Movie
+    movie: Movie | DocumentData
 }
 
 function Thumbnail({movie}: Props) {
